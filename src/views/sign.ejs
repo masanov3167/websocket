@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ro'yhatdan o'tish</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/material-design-iconic-font.css">
+    <link rel="stylesheet" href="./css/material-design-iconic-font.min.css">
+</head>
+<body>
+    <div class="container-custom">
+        <div class="wrapper">
+            <h1 class="title">Ro'yhatdan o'tish</h1>
+            <form action="/sign" enctype="multipart/form-data" method="POST" autocomplete="off" class="site-form form">
+                <label>
+                    <span class="zmdi zmdi-account"></span>
+                    <input type="text" id="usernameInput" class="name" name="name" placeholder="Ismingiz *" required>
+                </label>
+                <label>
+                    <span class="zmdi zmdi-email"></span>
+                    <input type="email" id="emailInput" name="email" class="email" placeholder="Email pochtangiz *" required>
+                </label>
+                <label>
+                    <span class="zmdi zmdi-lock"></span>
+                    <input type="password" id="passwordInput" class="pass" name="password" placeholder="Password *" required>
+                    <button class="zmdi zmdi-eye" type="button" id="showButton"></button>
+                </label>
+                <label class="custom-upload">
+                    <span class="zmdi zmdi-upload"></span>
+                    <span class="file-name">Profilingiz uchun rasm yuklang</span>
+                    <input type="file" id="uploadInput" class="pic" name="picture" accept="image/*">
+                </label>
+                <input type="submit" value="Register" id="submitButton">
+            </form>
+            <a href="/login" class="sign-link">Profilga kirish</a>
+            <img src="images/signup-image.jpg" alt="signup-image" class="signup-image">
+        </div>
+    </div>
+
+    <%   if(typeof message == "undefined") { %>
+        <h1 class="alert mt-3 mx-auto w-50 alert-info">Ro'yhatdan o'tish uchun formani to'ldiring!</h1>
+    <% }    %>
+
+    <%   if(typeof message != "undefined" && message) { %>
+        <h1 class="time alert mt-3 mx-auto w-50 alert-danger" > <%= message  %>  </h1>
+     <% }    %>
+
+    <script src="js/sign.js"></script>
+</body>
+</html>
