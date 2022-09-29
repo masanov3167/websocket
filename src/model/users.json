@@ -1,1 +1,23 @@
-[]
+[
+    {
+        "id": 1,
+        "name": "Jumabek",
+        "password": "qwerty",
+        "email": "masanov@gmail.com",
+        "pictureurl": "eee5d6d5-cfe3-4be5-a201-c6e1732dca89.png"
+    },
+    {
+        "id": 2,
+        "name": "efefefe",
+        "password": "ededee",
+        "email": "efef@efe",
+        "pictureurl": "d540feca-a8fa-463a-99da-363ad3aefa07.png"
+    },
+    {
+        "id": 3,
+        "name": "akala",
+        "password": "dsdsdsdsds",
+        "email": "dcsdsd@Sdsd",
+        "pictureurl": "3bee8857-8395-46ee-ae04-6fdb1ed74c48.png"
+    }
+]

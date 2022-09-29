@@ -22,6 +22,7 @@ if(ism){
 }
 
 socket.on('new-user-joined', data => {
+    console.log(data);
     const chatItem = document.createElement('li');
     chatItem.classList.add('chats-item');
     chatItem.innerHTML = `

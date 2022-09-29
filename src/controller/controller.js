@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const users = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'model', 'users.json')));
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'model', 'data.json')));
 
-const Token = payload => jwt.sign(payload, process.env.SECRET_KEY, {
+const Token = payload => jwt.sign(payload, "nimaga_kere_endi", {
     expiresIn:"24h"
 })
 // cookie("token", token({id:234}))
